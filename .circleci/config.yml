@@ -18,17 +18,7 @@ jobs:
       #
       # - image: redis:2.8.19
 
+    build:
+    # 略
     steps:
-      - checkout
-      - run:
-          name: composer インストール
-          command: composer install -n --prefer-dist
-      - run: 
-          name: npm インストール
-          command: npm ci
-      - run: 
-          name: npm 起動
-          command: npm run dev
-      - run:
-          name: テスト実行
-          command: vendor/bin/phpunit
+      - run: echo "Hello World"
